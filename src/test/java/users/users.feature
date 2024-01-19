@@ -1,92 +1,65 @@
-Feature: Get test on regress.in
-  
-#Variables globales para los escenarios de
+Feature: Test on regress.in
+
 Background:
-* url 'https://petstore.swagger.io/v2'
-* def username = 'arm997'
-Scenario: crear y buscar usuario 
-#Definimos la trama del JSON en una variable
-    * def user =
-  """
-  {
-    "id": 0,
-    "username": "arm997",
-    "firstName": "Armando",
-    "lastName": "Maldonado",
-    "email": "testbrumi@gmail.com",
-    "password": "test",
-    "phone": "0989849189",
-    "userStatus": 0
-  }
-  """
-#Pocedemos a construir el ecenario de prueba para el POST
-  Given path 'user'
-  And request user
-  When method Post
-  Then status 200
+* url 'https://petstore.swagger.io/'
 
-  * def message = response.message
-  * print 'created message is: ' + message
-  
-#Validamos que se haya hecho el POST exitosamente
-  Given path 'user'
-  And path user.username
-  When method get
-  Then status 200
+Scenario: CREAR UN USUARIO NUEVO
+* def user =
+"""
+      {
+          "id": 0,
+          "username": "arm997",
+          "firstName": "Armando",
+          "lastName": "Maldonado",
+          "email": "testbrumi@gmail.com",
+          "password": "test",
+          "phone": "0989849189",
+          "userStatus": 1
+
+      }
+      """
+
+Given url 'https://petstore.swagger.io/v2/user'
+And request user
+When method post
+Then status 200
 
 
+Scenario: OBTENER EL USUARIO CREADO MEDIANTE ID
+Given url 'https://petstore.swagger.io/v2/user/666'
+When method get
+Then status 200
 
-Scenario: actualizar y buscar usuario
-#Aquí  obtendremos el id y lo almacenamos en una variable para utilizarlo en la trama del json que vamos a usar en metodo PUT
-  Given path 'user'
-  And path username
-  When method get
-  Then status 200
-  * def id = response.id
-  * print 'el id es ' + id
-# Definimos la trama para el metodo put y utilizamos la variable donde guardamos el id
-  * def usernew =
-  """
-  {
-    "id": 0,
-    "username": "arm997",
-    "firstName": "Armando",
-    "lastName": "Maldonado",
-    "email": "testbrumi@gmail.com",
-    "password": "test",
-    "phone": "0989849189",
-    "userStatus": 0
-  }
-  """
-#Pocedemos a construir el ecenario de prueba para el PUT
-  Given path 'user'
-  And path username
-  And request usernew
-  When method put
-  Then status 200
 
-#Validamos que se haya hecho el PUT exitosamente
-  Given path 'user'
-  And path username
-  When method get
-  Then status 200
-  And match response.firstName == 'Rodrigo'
-  And match response.email == 'correo@cambio.com'
+Scenario: ACTUALIZAR USUARIO
+* def user =
+"""
+      {
+          "id": 666,
+          "username": "arm997",
+          "firstName": "TEST",
+          "lastName": "UPDATE",
+          "email": "testUpdate@gmail.com",
+          "password": "test",
+          "phone": "0989849189",
+          "userStatus": 0
+      }
+      """
 
-Scenario: eliminar usuario
-#Aquí  obtendremos el username y lo almacenamos en una variable para utilizarlo en PATH que vamos a usar en metodo DELETE
-  Given path 'user'
-  And path username
-  When method get
-  Then status 200
-  * def usname = response.username
-#Pocedemos a construir el ecenario de prueba para el DELETE  
-  Given path 'user'
-  And path usname
-  When method delete
-  Then status 200
-#Validamos que se haya hecho el DELETE exitosamente
-  Given path 'user'
-  And path username
-  When method get
-  Then status 404
+Given url 'https://petstore.swagger.io/v2/user/666'
+And request user
+When method put
+Then status 200
+
+
+Scenario: OBTENER USUARIO ACTUALIZADO POR ID
+      Given url 'https://petstore.swagger.io/v2/user/666'
+      When method get
+      Then status 200
+
+Scenario: ELIMINAR USUARIO CREADO CON ID
+Given url 'https://petstore.swagger.io/v2/user/666'
+When method delete
+Then status 200
+When method get
+Then status 200
