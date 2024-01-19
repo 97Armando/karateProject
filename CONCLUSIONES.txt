@@ -1,0 +1,14 @@
+##### LOGRO DE OBJETIVOS
+- La automatizacion del de pruebas API segun lo propuesto se cumplen a cabalidad haciendo uso favorable de las herramientas requeridas.
+
+- En el desarrollo se identica incompatibilidades entre versiones de dependencias y el jdk de java8 (funcional java11)
+
+- Tambien se valida la diferencia al usar los constructores gradle y maven, se tuvo mas incompatibilidad con gradle por lo que se opto por maven
+
+- Se cumple la generación de informes detallados y la identificación de posibles problemas en el paso a paso de las pruebas y los mensajes esperados a
+cada peticionen el software el cual estaria listo incluso graficos de porcentajes al finalizar la ejecucion de la prueba
+
+- Es recomendable el uso de las herramientas puesto que a comparacion de otras en el mercado permiten una mayor escalabilidad
+e integracion a la automatizacion de pruebas complejas que llevan mucho tiempo realizarlo.
+
+PRUEBA AUTOMATIZACION API ... OK!
