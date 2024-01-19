@@ -20,3 +20,6 @@ N
 src/test/java/karate-config.js,9\7\9733f574bca169a537f082a8f9a81359a92ee015
 9
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302

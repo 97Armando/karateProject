@@ -1,0 +1,42 @@
+00:43:07.587 karate.env system property was:  
+00:43:07.975 request:
+1 > PUT https://petstore.swagger.io/v2/user/666
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 154
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: petstore.swagger.io
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.21)
+{"id":666,"username":"arm997","firstName":"TEST","lastName":"UPDATE","email":"testUpdate@gmail.com","password":"test","phone":"0989849189","userStatus":0}
+
+00:43:09.045 response time in milliseconds: 1069,09
+1 < 200
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Fri, 19 Jan 2024 05:43:09 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+1 < Transfer-Encoding: chunked
+{"code":200,"type":"unknown","message":"666"}
+
+00:43:09.052 karate.env system property was:  
+00:43:09.054 request:
+1 > DELETE https://petstore.swagger.io/v2/user/666
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: petstore.swagger.io
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.21)
+
+00:43:09.362 response time in milliseconds: 308,77
+1 < 404
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Length: 0
+1 < Date: Fri, 19 Jan 2024 05:43:09 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+
+00:43:09.363 status code was: 404, expected: 200, response time: 309, url: https://petstore.swagger.io/v2/user/666, response: 
