@@ -1,23 +1,132 @@
-00:36:47.499 [main] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
-00:36:47.690 [ForkJoinPool-1-worker-7] INFO  com.intuit.karate - karate.env system property was:  
-00:36:47.690 [ForkJoinPool-1-worker-5] INFO  com.intuit.karate - karate.env system property was:  
-00:36:47.693 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - karate.env system property was:  
-00:36:47.697 [ForkJoinPool-1-worker-3] INFO  com.intuit.karate - karate.env system property was:  
-00:36:48.040 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+09:02:53.094 [main] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
+09:02:53.239 [ForkJoinPool-1-worker-0] INFO  com.intuit.karate - karate.env system property was:  
+09:02:53.239 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - karate.env system property was:  
+09:02:53.239 [ForkJoinPool-1-worker-3] INFO  com.intuit.karate - karate.env system property was:  
+09:02:53.239 [ForkJoinPool-1-worker-2] INFO  com.intuit.karate - karate.env system property was:  
+09:02:53.840 [ForkJoinPool-1-worker-0] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/user/666
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: petstore.swagger.io
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_391)
+
+09:02:53.840 [ForkJoinPool-1-worker-2] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/user/666
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: petstore.swagger.io
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_391)
+
+09:02:53.841 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/user
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 157
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: petstore.swagger.io
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_391)
+{"id":0,"username":"arm997","firstName":"Armando","lastName":"Maldonado","email":"testbrumi@gmail.com","password":"test","phone":"0989849189","userStatus":1}
+
+09:02:53.841 [ForkJoinPool-1-worker-3] DEBUG com.intuit.karate - request:
+1 > PUT https://petstore.swagger.io/v2/user/666
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 154
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: petstore.swagger.io
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_391)
+{"id":666,"username":"arm997","firstName":"TEST","lastName":"UPDATE","email":"testUpdate@gmail.com","password":"test","phone":"0989849189","userStatus":0}
+
+09:02:54.276 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 434,33
+1 < 200
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Fri, 19 Jan 2024 14:02:54 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+1 < Transfer-Encoding: chunked
+{"code":200,"type":"unknown","message":"9223372036854775807"}
+
+09:02:54.276 [ForkJoinPool-1-worker-2] DEBUG com.intuit.karate - response time in milliseconds: 434,73
+1 < 404
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Fri, 19 Jan 2024 14:02:54 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+1 < Transfer-Encoding: chunked
+{"code":1,"type":"error","message":"User not found"}
+
+09:02:54.278 [ForkJoinPool-1-worker-2] ERROR com.intuit.karate - status code was: 404, expected: 200, response time: 435, url: https://petstore.swagger.io/v2/user/666, response: {"code":1,"type":"error","message":"User not found"}
+09:02:54.283 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - karate.env system property was:  
+09:02:54.285 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
 1 > DELETE https://petstore.swagger.io/v2/user/666
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
 1 > Host: petstore.swagger.io
-1 > User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.21)
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_391)
 
-00:36:48.040 [ForkJoinPool-1-worker-5] DEBUG com.intuit.karate - request:
+09:02:54.420 [ForkJoinPool-1-worker-3] DEBUG com.intuit.karate - response time in milliseconds: 578,65
+1 < 200
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Fri, 19 Jan 2024 14:02:54 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+1 < Transfer-Encoding: chunked
+{"code":200,"type":"unknown","message":"666"}
+
+09:02:54.422 [ForkJoinPool-1-worker-0] DEBUG com.intuit.karate - response time in milliseconds: 580,16
+1 < 404
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Fri, 19 Jan 2024 14:02:54 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+1 < Transfer-Encoding: chunked
+{"code":1,"type":"error","message":"User not found"}
+
+09:02:54.422 [ForkJoinPool-1-worker-0] ERROR com.intuit.karate - status code was: 404, expected: 200, response time: 580, url: https://petstore.swagger.io/v2/user/666, response: {"code":1,"type":"error","message":"User not found"}
+09:02:54.519 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 233,15
+1 < 404
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Length: 0
+1 < Date: Fri, 19 Jan 2024 14:02:54 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+
+09:02:54.519 [ForkJoinPool-1-worker-1] ERROR com.intuit.karate - status code was: 404, expected: 200, response time: 233, url: https://petstore.swagger.io/v2/user/666, response: 
+09:02:54.552 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<fail>> feature 1 of 1: classpath:users/users.feature
+17:00:33.908 [main] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
+17:00:34.438 [ForkJoinPool-1-worker-3] INFO  com.intuit.karate - karate.env system property was:  
+17:00:34.438 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - karate.env system property was:  
+17:00:34.443 [ForkJoinPool-1-worker-5] INFO  com.intuit.karate - karate.env system property was:  
+17:00:34.448 [ForkJoinPool-1-worker-7] INFO  com.intuit.karate - karate.env system property was:  
+17:00:36.418 [ForkJoinPool-1-worker-5] DEBUG com.intuit.karate - request:
 1 > GET https://petstore.swagger.io/v2/user/666
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
 1 > Host: petstore.swagger.io
 1 > User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.21)
 
-00:36:48.040 [ForkJoinPool-1-worker-3] DEBUG com.intuit.karate - request:
+17:00:36.418 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/user/666
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: petstore.swagger.io
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.21)
+
+17:00:36.419 [ForkJoinPool-1-worker-3] DEBUG com.intuit.karate - request:
 1 > POST https://petstore.swagger.io/v2/user
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
@@ -27,173 +136,7 @@
 1 > User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.21)
 {"id":0,"username":"arm997","firstName":"Armando","lastName":"Maldonado","email":"testbrumi@gmail.com","password":"test","phone":"0989849189","userStatus":1}
 
-00:36:48.041 [ForkJoinPool-1-worker-7] DEBUG com.intuit.karate - request:
-1 > PUT https://petstore.swagger.io/v2/user/666
-1 > Accept-Encoding: gzip,deflate
-1 > Connection: Keep-Alive
-1 > Content-Length: 153
-1 > Content-Type: application/json; charset=UTF-8
-1 > Host: petstore.swagger.io
-1 > User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.21)
-{"id":666,"username":"arm997","firstName":"TEST","lastName":"UPDATE","email":"testbrumi@gmail.com","password":"test","phone":"0989849189","userStatus":0}
-
-00:36:49.109 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 1056,49
-1 < 404
-1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
-1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
-1 < Access-Control-Allow-Origin: *
-1 < Connection: keep-alive
-1 < Content-Length: 0
-1 < Date: Fri, 19 Jan 2024 05:36:49 GMT
-1 < Server: Jetty(9.2.9.v20150224)
-
-00:36:49.109 [ForkJoinPool-1-worker-5] DEBUG com.intuit.karate - response time in milliseconds: 1056,49
-1 < 404
-1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
-1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
-1 < Access-Control-Allow-Origin: *
-1 < Connection: keep-alive
-1 < Content-Type: application/json
-1 < Date: Fri, 19 Jan 2024 05:36:49 GMT
-1 < Server: Jetty(9.2.9.v20150224)
-1 < Transfer-Encoding: chunked
-{"code":1,"type":"error","message":"User not found"}
-
-00:36:49.109 [ForkJoinPool-1-worker-7] DEBUG com.intuit.karate - response time in milliseconds: 1056,52
-1 < 200
-1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
-1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
-1 < Access-Control-Allow-Origin: *
-1 < Connection: keep-alive
-1 < Content-Type: application/json
-1 < Date: Fri, 19 Jan 2024 05:36:49 GMT
-1 < Server: Jetty(9.2.9.v20150224)
-1 < Transfer-Encoding: chunked
-{"code":200,"type":"unknown","message":"666"}
-
-00:36:49.121 [ForkJoinPool-1-worker-5] ERROR com.intuit.karate - status code was: 404, expected: 200, response time: 1056, url: https://petstore.swagger.io/v2/user/666, response: {"code":1,"type":"error","message":"User not found"}
-00:36:49.121 [ForkJoinPool-1-worker-1] ERROR com.intuit.karate - status code was: 404, expected: 200, response time: 1056, url: https://petstore.swagger.io/v2/user/666, response: 
-00:36:49.216 [ForkJoinPool-1-worker-3] DEBUG com.intuit.karate - response time in milliseconds: 1165,09
-1 < 200
-1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
-1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
-1 < Access-Control-Allow-Origin: *
-1 < Connection: keep-alive
-1 < Content-Type: application/json
-1 < Date: Fri, 19 Jan 2024 05:36:49 GMT
-1 < Server: Jetty(9.2.9.v20150224)
-1 < Transfer-Encoding: chunked
-{"code":200,"type":"unknown","message":"9223372036854775807"}
-
-00:36:49.264 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<fail>> feature 1 of 1: classpath:users/users.feature
-00:38:36.516 [main] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
-00:38:36.708 [ForkJoinPool-1-worker-3] INFO  com.intuit.karate - karate.env system property was:  
-00:38:36.708 [ForkJoinPool-1-worker-7] INFO  com.intuit.karate - karate.env system property was:  
-00:38:36.713 [ForkJoinPool-1-worker-5] INFO  com.intuit.karate - karate.env system property was:  
-00:38:36.717 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - karate.env system property was:  
-00:38:37.108 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
-1 > DELETE https://petstore.swagger.io/v2/user/666
-1 > Accept-Encoding: gzip,deflate
-1 > Connection: Keep-Alive
-1 > Host: petstore.swagger.io
-1 > User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.21)
-
-00:38:37.108 [ForkJoinPool-1-worker-5] DEBUG com.intuit.karate - request:
-1 > GET https://petstore.swagger.io/v2/user/666
-1 > Accept-Encoding: gzip,deflate
-1 > Connection: Keep-Alive
-1 > Host: petstore.swagger.io
-1 > User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.21)
-
-00:38:37.109 [ForkJoinPool-1-worker-7] DEBUG com.intuit.karate - request:
-1 > PUT https://petstore.swagger.io/v2/user/666
-1 > Accept-Encoding: gzip,deflate
-1 > Connection: Keep-Alive
-1 > Content-Length: 153
-1 > Content-Type: application/json; charset=UTF-8
-1 > Host: petstore.swagger.io
-1 > User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.21)
-{"id":666,"username":"arm997","firstName":"TEST","lastName":"UPDATE","email":"testbrumi@gmail.com","password":"test","phone":"0989849189","userStatus":0}
-
-00:38:37.109 [ForkJoinPool-1-worker-3] DEBUG com.intuit.karate - request:
-1 > POST https://petstore.swagger.io/v2/user
-1 > Accept-Encoding: gzip,deflate
-1 > Connection: Keep-Alive
-1 > Content-Length: 157
-1 > Content-Type: application/json; charset=UTF-8
-1 > Host: petstore.swagger.io
-1 > User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.21)
-{"id":0,"username":"arm997","firstName":"Armando","lastName":"Maldonado","email":"testbrumi@gmail.com","password":"test","phone":"0989849189","userStatus":1}
-
-00:38:38.162 [ForkJoinPool-1-worker-3] DEBUG com.intuit.karate - response time in milliseconds: 1051,49
-1 < 200
-1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
-1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
-1 < Access-Control-Allow-Origin: *
-1 < Connection: keep-alive
-1 < Content-Type: application/json
-1 < Date: Fri, 19 Jan 2024 05:38:38 GMT
-1 < Server: Jetty(9.2.9.v20150224)
-1 < Transfer-Encoding: chunked
-{"code":200,"type":"unknown","message":"9223372036854775807"}
-
-00:38:38.162 [ForkJoinPool-1-worker-5] DEBUG com.intuit.karate - response time in milliseconds: 1052,05
-1 < 404
-1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
-1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
-1 < Access-Control-Allow-Origin: *
-1 < Connection: keep-alive
-1 < Content-Type: application/json
-1 < Date: Fri, 19 Jan 2024 05:38:38 GMT
-1 < Server: Jetty(9.2.9.v20150224)
-1 < Transfer-Encoding: chunked
-{"code":1,"type":"error","message":"User not found"}
-
-00:38:38.162 [ForkJoinPool-1-worker-7] DEBUG com.intuit.karate - response time in milliseconds: 1051,51
-1 < 200
-1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
-1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
-1 < Access-Control-Allow-Origin: *
-1 < Connection: keep-alive
-1 < Content-Type: application/json
-1 < Date: Fri, 19 Jan 2024 05:38:38 GMT
-1 < Server: Jetty(9.2.9.v20150224)
-1 < Transfer-Encoding: chunked
-{"code":200,"type":"unknown","message":"666"}
-
-00:38:38.163 [ForkJoinPool-1-worker-5] ERROR com.intuit.karate - status code was: 404, expected: 200, response time: 1052, url: https://petstore.swagger.io/v2/user/666, response: {"code":1,"type":"error","message":"User not found"}
-00:38:38.238 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 1130,02
-1 < 404
-1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
-1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
-1 < Access-Control-Allow-Origin: *
-1 < Connection: keep-alive
-1 < Content-Length: 0
-1 < Date: Fri, 19 Jan 2024 05:38:38 GMT
-1 < Server: Jetty(9.2.9.v20150224)
-
-00:38:38.238 [ForkJoinPool-1-worker-1] ERROR com.intuit.karate - status code was: 404, expected: 200, response time: 1130, url: https://petstore.swagger.io/v2/user/666, response: 
-00:38:38.292 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<fail>> feature 1 of 1: classpath:users/users.feature
-00:43:07.372 [main] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
-00:43:07.582 [ForkJoinPool-1-worker-5] INFO  com.intuit.karate - karate.env system property was:  
-00:43:07.582 [ForkJoinPool-1-worker-3] INFO  com.intuit.karate - karate.env system property was:  
-00:43:07.587 [ForkJoinPool-1-worker-7] INFO  com.intuit.karate - karate.env system property was:  
-00:43:07.591 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - karate.env system property was:  
-00:43:07.974 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
-1 > GET https://petstore.swagger.io/v2/user/666
-1 > Accept-Encoding: gzip,deflate
-1 > Connection: Keep-Alive
-1 > Host: petstore.swagger.io
-1 > User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.21)
-
-00:43:07.974 [ForkJoinPool-1-worker-5] DEBUG com.intuit.karate - request:
-1 > GET https://petstore.swagger.io/v2/user/666
-1 > Accept-Encoding: gzip,deflate
-1 > Connection: Keep-Alive
-1 > Host: petstore.swagger.io
-1 > User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.21)
-
-00:43:07.975 [ForkJoinPool-1-worker-7] DEBUG com.intuit.karate - request:
+17:00:36.420 [ForkJoinPool-1-worker-7] DEBUG com.intuit.karate - request:
 1 > PUT https://petstore.swagger.io/v2/user/666
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
@@ -203,7 +146,106 @@
 1 > User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.21)
 {"id":666,"username":"arm997","firstName":"TEST","lastName":"UPDATE","email":"testUpdate@gmail.com","password":"test","phone":"0989849189","userStatus":0}
 
-00:43:07.975 [ForkJoinPool-1-worker-3] DEBUG com.intuit.karate - request:
+17:00:39.437 [ForkJoinPool-1-worker-3] DEBUG com.intuit.karate - response time in milliseconds: 2990,74
+1 < 200
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Fri, 19 Jan 2024 22:00:39 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+1 < Transfer-Encoding: chunked
+{"code":200,"type":"unknown","message":"9223372036854755527"}
+
+17:00:39.437 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 2991,64
+1 < 404
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Fri, 19 Jan 2024 22:00:39 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+1 < Transfer-Encoding: chunked
+{"code":1,"type":"error","message":"User not found"}
+
+17:00:39.437 [ForkJoinPool-1-worker-5] DEBUG com.intuit.karate - response time in milliseconds: 2991,62
+1 < 404
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Fri, 19 Jan 2024 22:00:39 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+1 < Transfer-Encoding: chunked
+{"code":1,"type":"error","message":"User not found"}
+
+17:00:39.437 [ForkJoinPool-1-worker-7] DEBUG com.intuit.karate - response time in milliseconds: 2989,49
+1 < 200
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Fri, 19 Jan 2024 22:00:39 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+1 < Transfer-Encoding: chunked
+{"code":200,"type":"unknown","message":"666"}
+
+17:00:39.439 [ForkJoinPool-1-worker-5] ERROR com.intuit.karate - status code was: 404, expected: 200, response time: 2992, url: https://petstore.swagger.io/v2/user/666, response: {"code":1,"type":"error","message":"User not found"}
+17:00:39.439 [ForkJoinPool-1-worker-1] ERROR com.intuit.karate - status code was: 404, expected: 200, response time: 2992, url: https://petstore.swagger.io/v2/user/666, response: {"code":1,"type":"error","message":"User not found"}
+17:00:39.445 [ForkJoinPool-1-worker-3] INFO  com.intuit.karate - karate.env system property was:  
+17:00:39.447 [ForkJoinPool-1-worker-3] DEBUG com.intuit.karate - request:
+1 > DELETE https://petstore.swagger.io/v2/user/666
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: petstore.swagger.io
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.21)
+
+17:00:39.699 [ForkJoinPool-1-worker-3] DEBUG com.intuit.karate - response time in milliseconds: 252,16
+1 < 404
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Length: 0
+1 < Date: Fri, 19 Jan 2024 22:00:40 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+
+17:00:39.700 [ForkJoinPool-1-worker-3] ERROR com.intuit.karate - status code was: 404, expected: 200, response time: 252, url: https://petstore.swagger.io/v2/user/666, response: 
+17:00:39.885 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<fail>> feature 1 of 1: classpath:users/users.feature
+09:59:46.139 [main] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
+09:59:46.836 [ForkJoinPool-1-worker-7] INFO  com.intuit.karate - karate.env system property was:  
+09:59:46.837 [ForkJoinPool-1-worker-3] INFO  com.intuit.karate - karate.env system property was:  
+09:59:46.841 [ForkJoinPool-1-worker-5] INFO  com.intuit.karate - karate.env system property was:  
+09:59:46.843 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - karate.env system property was:  
+09:59:50.366 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/user/666
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: petstore.swagger.io
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.21)
+
+09:59:50.366 [ForkJoinPool-1-worker-5] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/user/666
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: petstore.swagger.io
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.21)
+
+09:59:50.369 [ForkJoinPool-1-worker-7] DEBUG com.intuit.karate - request:
+1 > PUT https://petstore.swagger.io/v2/user/666
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 154
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: petstore.swagger.io
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.21)
+{"id":666,"username":"arm997","firstName":"TEST","lastName":"UPDATE","email":"testUpdate@gmail.com","password":"test","phone":"0989849189","userStatus":0}
+
+09:59:50.369 [ForkJoinPool-1-worker-3] DEBUG com.intuit.karate - request:
 1 > POST https://petstore.swagger.io/v2/user
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
@@ -213,73 +255,73 @@
 1 > User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.21)
 {"id":0,"username":"arm997","firstName":"Armando","lastName":"Maldonado","email":"testbrumi@gmail.com","password":"test","phone":"0989849189","userStatus":1}
 
-00:43:09.045 [ForkJoinPool-1-worker-7] DEBUG com.intuit.karate - response time in milliseconds: 1069,09
+09:59:51.687 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 1301,02
+1 < 404
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Wed, 24 Jan 2024 14:59:51 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+1 < Transfer-Encoding: chunked
+{"code":1,"type":"error","message":"User not found"}
+
+09:59:51.687 [ForkJoinPool-1-worker-7] DEBUG com.intuit.karate - response time in milliseconds: 1300,05
 1 < 200
 1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
 1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
 1 < Access-Control-Allow-Origin: *
 1 < Connection: keep-alive
 1 < Content-Type: application/json
-1 < Date: Fri, 19 Jan 2024 05:43:09 GMT
+1 < Date: Wed, 24 Jan 2024 14:59:51 GMT
 1 < Server: Jetty(9.2.9.v20150224)
 1 < Transfer-Encoding: chunked
 {"code":200,"type":"unknown","message":"666"}
 
-00:43:09.052 [ForkJoinPool-1-worker-7] INFO  com.intuit.karate - karate.env system property was:  
-00:43:09.054 [ForkJoinPool-1-worker-7] DEBUG com.intuit.karate - request:
+09:59:51.687 [ForkJoinPool-1-worker-3] DEBUG com.intuit.karate - response time in milliseconds: 1300,04
+1 < 200
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Wed, 24 Jan 2024 14:59:51 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+1 < Transfer-Encoding: chunked
+{"code":200,"type":"unknown","message":"1789452601"}
+
+09:59:51.687 [ForkJoinPool-1-worker-5] DEBUG com.intuit.karate - response time in milliseconds: 1302,39
+1 < 404
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Wed, 24 Jan 2024 14:59:51 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+1 < Transfer-Encoding: chunked
+{"code":1,"type":"error","message":"User not found"}
+
+09:59:51.689 [ForkJoinPool-1-worker-5] ERROR com.intuit.karate - status code was: 404, expected: 200, response time: 1302, url: https://petstore.swagger.io/v2/user/666, response: {"code":1,"type":"error","message":"User not found"}
+09:59:51.689 [ForkJoinPool-1-worker-1] ERROR com.intuit.karate - status code was: 404, expected: 200, response time: 1301, url: https://petstore.swagger.io/v2/user/666, response: {"code":1,"type":"error","message":"User not found"}
+09:59:51.696 [ForkJoinPool-1-worker-3] INFO  com.intuit.karate - karate.env system property was:  
+09:59:51.698 [ForkJoinPool-1-worker-3] DEBUG com.intuit.karate - request:
 1 > DELETE https://petstore.swagger.io/v2/user/666
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
 1 > Host: petstore.swagger.io
 1 > User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.21)
 
-00:43:09.059 [ForkJoinPool-1-worker-3] DEBUG com.intuit.karate - response time in milliseconds: 1083,54
-1 < 200
-1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
-1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
-1 < Access-Control-Allow-Origin: *
-1 < Connection: keep-alive
-1 < Content-Type: application/json
-1 < Date: Fri, 19 Jan 2024 05:43:09 GMT
-1 < Server: Jetty(9.2.9.v20150224)
-1 < Transfer-Encoding: chunked
-{"code":200,"type":"unknown","message":"9223372036854775807"}
-
-00:43:09.344 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 1369,17
-1 < 404
-1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
-1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
-1 < Access-Control-Allow-Origin: *
-1 < Connection: keep-alive
-1 < Content-Type: application/json
-1 < Date: Fri, 19 Jan 2024 05:43:09 GMT
-1 < Server: Jetty(9.2.9.v20150224)
-1 < Transfer-Encoding: chunked
-{"code":1,"type":"error","message":"User not found"}
-
-00:43:09.344 [ForkJoinPool-1-worker-1] ERROR com.intuit.karate - status code was: 404, expected: 200, response time: 1369, url: https://petstore.swagger.io/v2/user/666, response: {"code":1,"type":"error","message":"User not found"}
-00:43:09.362 [ForkJoinPool-1-worker-7] DEBUG com.intuit.karate - response time in milliseconds: 308,77
+09:59:51.951 [ForkJoinPool-1-worker-3] DEBUG com.intuit.karate - response time in milliseconds: 252,28
 1 < 404
 1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
 1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
 1 < Access-Control-Allow-Origin: *
 1 < Connection: keep-alive
 1 < Content-Length: 0
-1 < Date: Fri, 19 Jan 2024 05:43:09 GMT
+1 < Date: Wed, 24 Jan 2024 14:59:52 GMT
 1 < Server: Jetty(9.2.9.v20150224)
 
-00:43:09.363 [ForkJoinPool-1-worker-7] ERROR com.intuit.karate - status code was: 404, expected: 200, response time: 309, url: https://petstore.swagger.io/v2/user/666, response: 
-00:43:09.407 [ForkJoinPool-1-worker-5] DEBUG com.intuit.karate - response time in milliseconds: 1432,26
-1 < 404
-1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
-1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
-1 < Access-Control-Allow-Origin: *
-1 < Connection: keep-alive
-1 < Content-Type: application/json
-1 < Date: Fri, 19 Jan 2024 05:43:09 GMT
-1 < Server: Jetty(9.2.9.v20150224)
-1 < Transfer-Encoding: chunked
-{"code":1,"type":"error","message":"User not found"}
-
-00:43:09.407 [ForkJoinPool-1-worker-5] ERROR com.intuit.karate - status code was: 404, expected: 200, response time: 1432, url: https://petstore.swagger.io/v2/user/666, response: {"code":1,"type":"error","message":"User not found"}
-00:43:09.464 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<fail>> feature 1 of 1: classpath:users/users.feature
+09:59:51.952 [ForkJoinPool-1-worker-3] ERROR com.intuit.karate - status code was: 404, expected: 200, response time: 252, url: https://petstore.swagger.io/v2/user/666, response: 
+09:59:52.754 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<fail>> feature 1 of 1: classpath:users/users.feature

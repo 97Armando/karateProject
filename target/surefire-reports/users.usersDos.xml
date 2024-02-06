@@ -1,0 +1,369 @@
+<testsuite failures="0" name="users/usersDos.feature" skipped="0" tests="5" time="6.266509">
+  <testcase classname="users.usersDos" name="CREAR UN USUARIO" time="1.497108">
+    <system-out>* url baseURL ............................................................. passed
+* def createUserRequestFilePath = "jsonpayload/createUser.json" ........... passed
+* def createUserResponseFilePath = "jsonpayload/createUserResponse.json" .. passed
+* def getUserResponseFilePath = "jsonpayload/getUser.json" ................ passed
+* def updateUserRequestFilePath = "jsonpayload/updateUser.json" ........... passed
+* def updateUserResponseFilePath = "jsonpayload/updateUserResponse.json" .. passed
+* def testUser = 'arm997' ................................................. passed
+* def testFirstName = 'Armando' ........................................... passed
+* def testLastName = 'Maldonado' .......................................... passed
+* def testEmail = 'testbrumi@gmail.com' ................................... passed
+* def testPassword = 'test' ............................................... passed
+* def testPhone = '0989849189' ............................................ passed
+* def testId = 1789452603 ................................................. passed
+* def testFirstNameUpdate = 'Update' ...................................... passed
+* def testEmailUpdate = 'update@gmail.com' ................................ passed
+Given path '/user' ........................................................ passed
+And def reqBody = read(createUserRequestFilePath) ......................... passed
+And def resBody = read(createUserResponseFilePath) ........................ passed
+And set reqBody ........................................................... passed
+And request reqBody ....................................................... passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+And match response == resBody ............................................. passed
+And print response ........................................................ passed</system-out>
+  </testcase>
+  <testcase classname="users.usersDos" name="OBTENER EL USUARIO CREADO" time="1.498722">
+    <system-out>* url baseURL ............................................................. passed
+* def createUserRequestFilePath = "jsonpayload/createUser.json" ........... passed
+* def createUserResponseFilePath = "jsonpayload/createUserResponse.json" .. passed
+* def getUserResponseFilePath = "jsonpayload/getUser.json" ................ passed
+* def updateUserRequestFilePath = "jsonpayload/updateUser.json" ........... passed
+* def updateUserResponseFilePath = "jsonpayload/updateUserResponse.json" .. passed
+* def testUser = 'arm997' ................................................. passed
+* def testFirstName = 'Armando' ........................................... passed
+* def testLastName = 'Maldonado' .......................................... passed
+* def testEmail = 'testbrumi@gmail.com' ................................... passed
+* def testPassword = 'test' ............................................... passed
+* def testPhone = '0989849189' ............................................ passed
+* def testId = 1789452603 ................................................. passed
+* def testFirstNameUpdate = 'Update' ...................................... passed
+* def testEmailUpdate = 'update@gmail.com' ................................ passed
+Given path '/user' ........................................................ passed
+And def reqBody = read(createUserRequestFilePath) ......................... passed
+And def resBody = read(createUserResponseFilePath) ........................ passed
+And set reqBody ........................................................... passed
+And request reqBody ....................................................... passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+And match response == resBody ............................................. passed
+And print response ........................................................ passed
+* url baseURL ............................................................. passed
+* def createUserRequestFilePath = "jsonpayload/createUser.json" ........... passed
+* def createUserResponseFilePath = "jsonpayload/createUserResponse.json" .. passed
+* def getUserResponseFilePath = "jsonpayload/getUser.json" ................ passed
+* def updateUserRequestFilePath = "jsonpayload/updateUser.json" ........... passed
+* def updateUserResponseFilePath = "jsonpayload/updateUserResponse.json" .. passed
+* def testUser = 'arm997' ................................................. passed
+* def testFirstName = 'Armando' ........................................... passed
+* def testLastName = 'Maldonado' .......................................... passed
+* def testEmail = 'testbrumi@gmail.com' ................................... passed
+* def testPassword = 'test' ............................................... passed
+* def testPhone = '0989849189' ............................................ passed
+* def testId = 1789452603 ................................................. passed
+* def testFirstNameUpdate = 'Update' ...................................... passed
+* def testEmailUpdate = 'update@gmail.com' ................................ passed
+Given path '/user/'+testUser .............................................. passed
+And def resBody = read(getUserResponseFilePath) ........................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+And match response == resBody ............................................. passed
+And match $.username == testUser .......................................... passed
+And match $.firstName == testFirstName .................................... passed
+And match $.lastName == testLastName ...................................... passed
+And match $.phone == testPhone ............................................ passed
+And match $.email == testEmail ............................................ passed
+And match $.id == testId .................................................. passed
+And print response ........................................................ passed</system-out>
+  </testcase>
+  <testcase classname="users.usersDos" name="ACTUALIZAR USUARIO" time="1.497735">
+    <system-out>* url baseURL ............................................................. passed
+* def createUserRequestFilePath = "jsonpayload/createUser.json" ........... passed
+* def createUserResponseFilePath = "jsonpayload/createUserResponse.json" .. passed
+* def getUserResponseFilePath = "jsonpayload/getUser.json" ................ passed
+* def updateUserRequestFilePath = "jsonpayload/updateUser.json" ........... passed
+* def updateUserResponseFilePath = "jsonpayload/updateUserResponse.json" .. passed
+* def testUser = 'arm997' ................................................. passed
+* def testFirstName = 'Armando' ........................................... passed
+* def testLastName = 'Maldonado' .......................................... passed
+* def testEmail = 'testbrumi@gmail.com' ................................... passed
+* def testPassword = 'test' ............................................... passed
+* def testPhone = '0989849189' ............................................ passed
+* def testId = 1789452603 ................................................. passed
+* def testFirstNameUpdate = 'Update' ...................................... passed
+* def testEmailUpdate = 'update@gmail.com' ................................ passed
+Given path '/user' ........................................................ passed
+And def reqBody = read(createUserRequestFilePath) ......................... passed
+And def resBody = read(createUserResponseFilePath) ........................ passed
+And set reqBody ........................................................... passed
+And request reqBody ....................................................... passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+And match response == resBody ............................................. passed
+And print response ........................................................ passed
+* url baseURL ............................................................. passed
+* def createUserRequestFilePath = "jsonpayload/createUser.json" ........... passed
+* def createUserResponseFilePath = "jsonpayload/createUserResponse.json" .. passed
+* def getUserResponseFilePath = "jsonpayload/getUser.json" ................ passed
+* def updateUserRequestFilePath = "jsonpayload/updateUser.json" ........... passed
+* def updateUserResponseFilePath = "jsonpayload/updateUserResponse.json" .. passed
+* def testUser = 'arm997' ................................................. passed
+* def testFirstName = 'Armando' ........................................... passed
+* def testLastName = 'Maldonado' .......................................... passed
+* def testEmail = 'testbrumi@gmail.com' ................................... passed
+* def testPassword = 'test' ............................................... passed
+* def testPhone = '0989849189' ............................................ passed
+* def testId = 1789452603 ................................................. passed
+* def testFirstNameUpdate = 'Update' ...................................... passed
+* def testEmailUpdate = 'update@gmail.com' ................................ passed
+Given path '/user/'+testUser .............................................. passed
+And def resBody = read(getUserResponseFilePath) ........................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+And match response == resBody ............................................. passed
+And match $.username == testUser .......................................... passed
+And match $.firstName == testFirstName .................................... passed
+And match $.lastName == testLastName ...................................... passed
+And match $.phone == testPhone ............................................ passed
+And match $.email == testEmail ............................................ passed
+And match $.id == testId .................................................. passed
+And print response ........................................................ passed
+* url baseURL ............................................................. passed
+* def createUserRequestFilePath = "jsonpayload/createUser.json" ........... passed
+* def createUserResponseFilePath = "jsonpayload/createUserResponse.json" .. passed
+* def getUserResponseFilePath = "jsonpayload/getUser.json" ................ passed
+* def updateUserRequestFilePath = "jsonpayload/updateUser.json" ........... passed
+* def updateUserResponseFilePath = "jsonpayload/updateUserResponse.json" .. passed
+* def testUser = 'arm997' ................................................. passed
+* def testFirstName = 'Armando' ........................................... passed
+* def testLastName = 'Maldonado' .......................................... passed
+* def testEmail = 'testbrumi@gmail.com' ................................... passed
+* def testPassword = 'test' ............................................... passed
+* def testPhone = '0989849189' ............................................ passed
+* def testId = 1789452603 ................................................. passed
+* def testFirstNameUpdate = 'Update' ...................................... passed
+* def testEmailUpdate = 'update@gmail.com' ................................ passed
+Given path '/user/'+testUser .............................................. passed
+And def reqBody = read(updateUserRequestFilePath) ......................... passed
+And def resBody = read(updateUserResponseFilePath) ........................ passed
+And set reqBody ........................................................... passed
+And request reqBody ....................................................... passed
+When method PUT ........................................................... passed
+Then status 200 ........................................................... passed
+And match response == resBody ............................................. passed
+And print response ........................................................ passed</system-out>
+  </testcase>
+  <testcase classname="users.usersDos" name="OBTENER EL USUARIO ACTUALIZADO" time="1.496522">
+    <system-out>* url baseURL ............................................................. passed
+* def createUserRequestFilePath = "jsonpayload/createUser.json" ........... passed
+* def createUserResponseFilePath = "jsonpayload/createUserResponse.json" .. passed
+* def getUserResponseFilePath = "jsonpayload/getUser.json" ................ passed
+* def updateUserRequestFilePath = "jsonpayload/updateUser.json" ........... passed
+* def updateUserResponseFilePath = "jsonpayload/updateUserResponse.json" .. passed
+* def testUser = 'arm997' ................................................. passed
+* def testFirstName = 'Armando' ........................................... passed
+* def testLastName = 'Maldonado' .......................................... passed
+* def testEmail = 'testbrumi@gmail.com' ................................... passed
+* def testPassword = 'test' ............................................... passed
+* def testPhone = '0989849189' ............................................ passed
+* def testId = 1789452603 ................................................. passed
+* def testFirstNameUpdate = 'Update' ...................................... passed
+* def testEmailUpdate = 'update@gmail.com' ................................ passed
+Given path '/user' ........................................................ passed
+And def reqBody = read(createUserRequestFilePath) ......................... passed
+And def resBody = read(createUserResponseFilePath) ........................ passed
+And set reqBody ........................................................... passed
+And request reqBody ....................................................... passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+And match response == resBody ............................................. passed
+And print response ........................................................ passed
+* url baseURL ............................................................. passed
+* def createUserRequestFilePath = "jsonpayload/createUser.json" ........... passed
+* def createUserResponseFilePath = "jsonpayload/createUserResponse.json" .. passed
+* def getUserResponseFilePath = "jsonpayload/getUser.json" ................ passed
+* def updateUserRequestFilePath = "jsonpayload/updateUser.json" ........... passed
+* def updateUserResponseFilePath = "jsonpayload/updateUserResponse.json" .. passed
+* def testUser = 'arm997' ................................................. passed
+* def testFirstName = 'Armando' ........................................... passed
+* def testLastName = 'Maldonado' .......................................... passed
+* def testEmail = 'testbrumi@gmail.com' ................................... passed
+* def testPassword = 'test' ............................................... passed
+* def testPhone = '0989849189' ............................................ passed
+* def testId = 1789452603 ................................................. passed
+* def testFirstNameUpdate = 'Update' ...................................... passed
+* def testEmailUpdate = 'update@gmail.com' ................................ passed
+Given path '/user/'+testUser .............................................. passed
+And def resBody = read(getUserResponseFilePath) ........................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+And match response == resBody ............................................. passed
+And match $.username == testUser .......................................... passed
+And match $.firstName == testFirstName .................................... passed
+And match $.lastName == testLastName ...................................... passed
+And match $.phone == testPhone ............................................ passed
+And match $.email == testEmail ............................................ passed
+And match $.id == testId .................................................. passed
+And print response ........................................................ passed
+* url baseURL ............................................................. passed
+* def createUserRequestFilePath = "jsonpayload/createUser.json" ........... passed
+* def createUserResponseFilePath = "jsonpayload/createUserResponse.json" .. passed
+* def getUserResponseFilePath = "jsonpayload/getUser.json" ................ passed
+* def updateUserRequestFilePath = "jsonpayload/updateUser.json" ........... passed
+* def updateUserResponseFilePath = "jsonpayload/updateUserResponse.json" .. passed
+* def testUser = 'arm997' ................................................. passed
+* def testFirstName = 'Armando' ........................................... passed
+* def testLastName = 'Maldonado' .......................................... passed
+* def testEmail = 'testbrumi@gmail.com' ................................... passed
+* def testPassword = 'test' ............................................... passed
+* def testPhone = '0989849189' ............................................ passed
+* def testId = 1789452603 ................................................. passed
+* def testFirstNameUpdate = 'Update' ...................................... passed
+* def testEmailUpdate = 'update@gmail.com' ................................ passed
+Given path '/user/'+testUser .............................................. passed
+And def reqBody = read(updateUserRequestFilePath) ......................... passed
+And def resBody = read(updateUserResponseFilePath) ........................ passed
+And set reqBody ........................................................... passed
+And request reqBody ....................................................... passed
+When method PUT ........................................................... passed
+Then status 200 ........................................................... passed
+And match response == resBody ............................................. passed
+And print response ........................................................ passed
+* url baseURL ............................................................. passed
+* def createUserRequestFilePath = "jsonpayload/createUser.json" ........... passed
+* def createUserResponseFilePath = "jsonpayload/createUserResponse.json" .. passed
+* def getUserResponseFilePath = "jsonpayload/getUser.json" ................ passed
+* def updateUserRequestFilePath = "jsonpayload/updateUser.json" ........... passed
+* def updateUserResponseFilePath = "jsonpayload/updateUserResponse.json" .. passed
+* def testUser = 'arm997' ................................................. passed
+* def testFirstName = 'Armando' ........................................... passed
+* def testLastName = 'Maldonado' .......................................... passed
+* def testEmail = 'testbrumi@gmail.com' ................................... passed
+* def testPassword = 'test' ............................................... passed
+* def testPhone = '0989849189' ............................................ passed
+* def testId = 1789452603 ................................................. passed
+* def testFirstNameUpdate = 'Update' ...................................... passed
+* def testEmailUpdate = 'update@gmail.com' ................................ passed
+Given path '/user/'+testUser .............................................. passed
+And def resBody = read(getUserResponseFilePath) ........................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed</system-out>
+  </testcase>
+  <testcase classname="users.usersDos" name="ELIMINAR USUARIO" time="0.276423">
+    <system-out>* url baseURL ............................................................. passed
+* def createUserRequestFilePath = "jsonpayload/createUser.json" ........... passed
+* def createUserResponseFilePath = "jsonpayload/createUserResponse.json" .. passed
+* def getUserResponseFilePath = "jsonpayload/getUser.json" ................ passed
+* def updateUserRequestFilePath = "jsonpayload/updateUser.json" ........... passed
+* def updateUserResponseFilePath = "jsonpayload/updateUserResponse.json" .. passed
+* def testUser = 'arm997' ................................................. passed
+* def testFirstName = 'Armando' ........................................... passed
+* def testLastName = 'Maldonado' .......................................... passed
+* def testEmail = 'testbrumi@gmail.com' ................................... passed
+* def testPassword = 'test' ............................................... passed
+* def testPhone = '0989849189' ............................................ passed
+* def testId = 1789452603 ................................................. passed
+* def testFirstNameUpdate = 'Update' ...................................... passed
+* def testEmailUpdate = 'update@gmail.com' ................................ passed
+Given path '/user' ........................................................ passed
+And def reqBody = read(createUserRequestFilePath) ......................... passed
+And def resBody = read(createUserResponseFilePath) ........................ passed
+And set reqBody ........................................................... passed
+And request reqBody ....................................................... passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+And match response == resBody ............................................. passed
+And print response ........................................................ passed
+* url baseURL ............................................................. passed
+* def createUserRequestFilePath = "jsonpayload/createUser.json" ........... passed
+* def createUserResponseFilePath = "jsonpayload/createUserResponse.json" .. passed
+* def getUserResponseFilePath = "jsonpayload/getUser.json" ................ passed
+* def updateUserRequestFilePath = "jsonpayload/updateUser.json" ........... passed
+* def updateUserResponseFilePath = "jsonpayload/updateUserResponse.json" .. passed
+* def testUser = 'arm997' ................................................. passed
+* def testFirstName = 'Armando' ........................................... passed
+* def testLastName = 'Maldonado' .......................................... passed
+* def testEmail = 'testbrumi@gmail.com' ................................... passed
+* def testPassword = 'test' ............................................... passed
+* def testPhone = '0989849189' ............................................ passed
+* def testId = 1789452603 ................................................. passed
+* def testFirstNameUpdate = 'Update' ...................................... passed
+* def testEmailUpdate = 'update@gmail.com' ................................ passed
+Given path '/user/'+testUser .............................................. passed
+And def resBody = read(getUserResponseFilePath) ........................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+And match response == resBody ............................................. passed
+And match $.username == testUser .......................................... passed
+And match $.firstName == testFirstName .................................... passed
+And match $.lastName == testLastName ...................................... passed
+And match $.phone == testPhone ............................................ passed
+And match $.email == testEmail ............................................ passed
+And match $.id == testId .................................................. passed
+And print response ........................................................ passed
+* url baseURL ............................................................. passed
+* def createUserRequestFilePath = "jsonpayload/createUser.json" ........... passed
+* def createUserResponseFilePath = "jsonpayload/createUserResponse.json" .. passed
+* def getUserResponseFilePath = "jsonpayload/getUser.json" ................ passed
+* def updateUserRequestFilePath = "jsonpayload/updateUser.json" ........... passed
+* def updateUserResponseFilePath = "jsonpayload/updateUserResponse.json" .. passed
+* def testUser = 'arm997' ................................................. passed
+* def testFirstName = 'Armando' ........................................... passed
+* def testLastName = 'Maldonado' .......................................... passed
+* def testEmail = 'testbrumi@gmail.com' ................................... passed
+* def testPassword = 'test' ............................................... passed
+* def testPhone = '0989849189' ............................................ passed
+* def testId = 1789452603 ................................................. passed
+* def testFirstNameUpdate = 'Update' ...................................... passed
+* def testEmailUpdate = 'update@gmail.com' ................................ passed
+Given path '/user/'+testUser .............................................. passed
+And def reqBody = read(updateUserRequestFilePath) ......................... passed
+And def resBody = read(updateUserResponseFilePath) ........................ passed
+And set reqBody ........................................................... passed
+And request reqBody ....................................................... passed
+When method PUT ........................................................... passed
+Then status 200 ........................................................... passed
+And match response == resBody ............................................. passed
+And print response ........................................................ passed
+* url baseURL ............................................................. passed
+* def createUserRequestFilePath = "jsonpayload/createUser.json" ........... passed
+* def createUserResponseFilePath = "jsonpayload/createUserResponse.json" .. passed
+* def getUserResponseFilePath = "jsonpayload/getUser.json" ................ passed
+* def updateUserRequestFilePath = "jsonpayload/updateUser.json" ........... passed
+* def updateUserResponseFilePath = "jsonpayload/updateUserResponse.json" .. passed
+* def testUser = 'arm997' ................................................. passed
+* def testFirstName = 'Armando' ........................................... passed
+* def testLastName = 'Maldonado' .......................................... passed
+* def testEmail = 'testbrumi@gmail.com' ................................... passed
+* def testPassword = 'test' ............................................... passed
+* def testPhone = '0989849189' ............................................ passed
+* def testId = 1789452603 ................................................. passed
+* def testFirstNameUpdate = 'Update' ...................................... passed
+* def testEmailUpdate = 'update@gmail.com' ................................ passed
+Given path '/user/'+testUser .............................................. passed
+And def resBody = read(getUserResponseFilePath) ........................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+* url baseURL ............................................................. passed
+* def createUserRequestFilePath = "jsonpayload/createUser.json" ........... passed
+* def createUserResponseFilePath = "jsonpayload/createUserResponse.json" .. passed
+* def getUserResponseFilePath = "jsonpayload/getUser.json" ................ passed
+* def updateUserRequestFilePath = "jsonpayload/updateUser.json" ........... passed
+* def updateUserResponseFilePath = "jsonpayload/updateUserResponse.json" .. passed
+* def testUser = 'arm997' ................................................. passed
+* def testFirstName = 'Armando' ........................................... passed
+* def testLastName = 'Maldonado' .......................................... passed
+* def testEmail = 'testbrumi@gmail.com' ................................... passed
+* def testPassword = 'test' ............................................... passed
+* def testPhone = '0989849189' ............................................ passed
+* def testId = 1789452603 ................................................. passed
+* def testFirstNameUpdate = 'Update' ...................................... passed
+* def testEmailUpdate = 'update@gmail.com' ................................ passed
+Given path '/user/'+testUser .............................................. passed
+And def resBody = read(getUserResponseFilePath) ........................... passed
+When method DELETE ........................................................ passed
+Then status 200 ........................................................... passed</system-out>
+  </testcase>
+</testsuite>

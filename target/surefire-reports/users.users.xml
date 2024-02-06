@@ -1,5 +1,5 @@
-<testsuite failures="3" name="users/users.feature" skipped="0" tests="5" time="6.619391">
-  <testcase classname="users.users" name="CREAR UN USUARIO NUEVO" time="1.421997">
+<testsuite failures="3" name="users/users.feature" skipped="0" tests="5" time="18.240318">
+  <testcase classname="users.users" name="CREAR UN USUARIO NUEVO" time="4.496024">
     <system-out>* url 'https://petstore.swagger.io/' ...................................... passed
 * def user = .............................................................. passed
 Given url 'https://petstore.swagger.io/v2/user' ........................... passed
@@ -7,8 +7,8 @@ And request user .......................................................... pass
 When method post .......................................................... passed
 Then status 200 ........................................................... passed</system-out>
   </testcase>
-  <testcase classname="users.users" name="OBTENER EL USUARIO CREADO MEDIANTE ID" time="1.770207">
-    <failure message="users.feature:31 - status code was: 404, expected: 200, response time: 1432, url: https://petstore.swagger.io/v2/user/666, response: {&quot;code&quot;:1,&quot;type&quot;:&quot;error&quot;,&quot;message&quot;:&quot;User not found&quot;}">* url 'https://petstore.swagger.io/' ...................................... passed
+  <testcase classname="users.users" name="OBTENER EL USUARIO CREADO MEDIANTE ID" time="4.496622">
+    <failure message="users.feature:31 - status code was: 404, expected: 200, response time: 1302, url: https://petstore.swagger.io/v2/user/666, response: {&quot;code&quot;:1,&quot;type&quot;:&quot;error&quot;,&quot;message&quot;:&quot;User not found&quot;}">* url 'https://petstore.swagger.io/' ...................................... passed
 * def user = .............................................................. passed
 Given url 'https://petstore.swagger.io/v2/user' ........................... passed
 And request user .......................................................... passed
@@ -20,10 +20,10 @@ When method get ........................................................... pass
 Then status 200 ........................................................... failed
 
 Stack Trace:
-com.intuit.karate.exception.KarateException: users.feature:31 - status code was: 404, expected: 200, response time: 1432, url: https://petstore.swagger.io/v2/user/666, response: {"code":1,"type":"error","message":"User not found"}&#13;
+com.intuit.karate.exception.KarateException: users.feature:31 - status code was: 404, expected: 200, response time: 1302, url: https://petstore.swagger.io/v2/user/666, response: {"code":1,"type":"error","message":"User not found"}&#13;
 	at ✽.Then status 200 (users.feature:31)</failure>
   </testcase>
-  <testcase classname="users.users" name="ACTUALIZAR USUARIO" time="1.409148">
+  <testcase classname="users.users" name="ACTUALIZAR USUARIO" time="4.495874">
     <system-out>* url 'https://petstore.swagger.io/' ...................................... passed
 * def user = .............................................................. passed
 Given url 'https://petstore.swagger.io/v2/user' ........................... passed
@@ -36,7 +36,7 @@ When method get ........................................................... pass
 Then status 200 ........................................................... failed
 
 Stack Trace:
-com.intuit.karate.exception.KarateException: users.feature:31 - status code was: 404, expected: 200, response time: 1432, url: https://petstore.swagger.io/v2/user/666, response: {"code":1,"type":"error","message":"User not found"}&#13;
+com.intuit.karate.exception.KarateException: users.feature:31 - status code was: 404, expected: 200, response time: 1302, url: https://petstore.swagger.io/v2/user/666, response: {"code":1,"type":"error","message":"User not found"}&#13;
 	at ✽.Then status 200 (users.feature:31)&#13;
 
 * url 'https://petstore.swagger.io/' ...................................... passed
@@ -46,8 +46,8 @@ And request user .......................................................... pass
 When method put ........................................................... passed
 Then status 200 ........................................................... passed</system-out>
   </testcase>
-  <testcase classname="users.users" name="OBTENER USUARIO ACTUALIZADO POR ID" time="1.707297">
-    <failure message="users.feature:58 - status code was: 404, expected: 200, response time: 1369, url: https://petstore.swagger.io/v2/user/666, response: {&quot;code&quot;:1,&quot;type&quot;:&quot;error&quot;,&quot;message&quot;:&quot;User not found&quot;}">* url 'https://petstore.swagger.io/' ...................................... passed
+  <testcase classname="users.users" name="OBTENER USUARIO ACTUALIZADO POR ID" time="4.496562">
+    <failure message="users.feature:58 - status code was: 404, expected: 200, response time: 1301, url: https://petstore.swagger.io/v2/user/666, response: {&quot;code&quot;:1,&quot;type&quot;:&quot;error&quot;,&quot;message&quot;:&quot;User not found&quot;}">* url 'https://petstore.swagger.io/' ...................................... passed
 * def user = .............................................................. passed
 Given url 'https://petstore.swagger.io/v2/user' ........................... passed
 And request user .......................................................... passed
@@ -59,7 +59,7 @@ When method get ........................................................... pass
 Then status 200 ........................................................... failed
 
 Stack Trace:
-com.intuit.karate.exception.KarateException: users.feature:31 - status code was: 404, expected: 200, response time: 1432, url: https://petstore.swagger.io/v2/user/666, response: {"code":1,"type":"error","message":"User not found"}&#13;
+com.intuit.karate.exception.KarateException: users.feature:31 - status code was: 404, expected: 200, response time: 1302, url: https://petstore.swagger.io/v2/user/666, response: {"code":1,"type":"error","message":"User not found"}&#13;
 	at ✽.Then status 200 (users.feature:31)&#13;
 
 * url 'https://petstore.swagger.io/' ...................................... passed
@@ -74,11 +74,11 @@ When method get ........................................................... pass
 Then status 200 ........................................................... failed
 
 Stack Trace:
-com.intuit.karate.exception.KarateException: users.feature:58 - status code was: 404, expected: 200, response time: 1369, url: https://petstore.swagger.io/v2/user/666, response: {"code":1,"type":"error","message":"User not found"}&#13;
+com.intuit.karate.exception.KarateException: users.feature:58 - status code was: 404, expected: 200, response time: 1301, url: https://petstore.swagger.io/v2/user/666, response: {"code":1,"type":"error","message":"User not found"}&#13;
 	at ✽.Then status 200 (users.feature:58)</failure>
   </testcase>
-  <testcase classname="users.users" name="ELIMINAR USUARIO CREADO CON ID" time="0.310742">
-    <failure message="users.feature:63 - status code was: 404, expected: 200, response time: 309, url: https://petstore.swagger.io/v2/user/666, response: ">* url 'https://petstore.swagger.io/' ...................................... passed
+  <testcase classname="users.users" name="ELIMINAR USUARIO CREADO CON ID" time="0.255235">
+    <failure message="users.feature:63 - status code was: 404, expected: 200, response time: 252, url: https://petstore.swagger.io/v2/user/666, response: ">* url 'https://petstore.swagger.io/' ...................................... passed
 * def user = .............................................................. passed
 Given url 'https://petstore.swagger.io/v2/user' ........................... passed
 And request user .......................................................... passed
@@ -90,7 +90,7 @@ When method get ........................................................... pass
 Then status 200 ........................................................... failed
 
 Stack Trace:
-com.intuit.karate.exception.KarateException: users.feature:31 - status code was: 404, expected: 200, response time: 1432, url: https://petstore.swagger.io/v2/user/666, response: {"code":1,"type":"error","message":"User not found"}&#13;
+com.intuit.karate.exception.KarateException: users.feature:31 - status code was: 404, expected: 200, response time: 1302, url: https://petstore.swagger.io/v2/user/666, response: {"code":1,"type":"error","message":"User not found"}&#13;
 	at ✽.Then status 200 (users.feature:31)&#13;
 
 * url 'https://petstore.swagger.io/' ...................................... passed
@@ -105,7 +105,7 @@ When method get ........................................................... pass
 Then status 200 ........................................................... failed
 
 Stack Trace:
-com.intuit.karate.exception.KarateException: users.feature:58 - status code was: 404, expected: 200, response time: 1369, url: https://petstore.swagger.io/v2/user/666, response: {"code":1,"type":"error","message":"User not found"}&#13;
+com.intuit.karate.exception.KarateException: users.feature:58 - status code was: 404, expected: 200, response time: 1301, url: https://petstore.swagger.io/v2/user/666, response: {"code":1,"type":"error","message":"User not found"}&#13;
 	at ✽.Then status 200 (users.feature:58)&#13;
 
 * url 'https://petstore.swagger.io/' ...................................... passed
@@ -114,7 +114,7 @@ When method delete ........................................................ pass
 Then status 200 ........................................................... failed
 
 Stack Trace:
-com.intuit.karate.exception.KarateException: users.feature:63 - status code was: 404, expected: 200, response time: 309, url: https://petstore.swagger.io/v2/user/666, response: &#13;
+com.intuit.karate.exception.KarateException: users.feature:63 - status code was: 404, expected: 200, response time: 252, url: https://petstore.swagger.io/v2/user/666, response: &#13;
 	at ✽.Then status 200 (users.feature:63)&#13;
 
 When method get ........................................................... skipped
