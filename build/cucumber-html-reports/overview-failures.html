@@ -75,7 +75,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>karateProject</td>
-      <td>06 Feb 2024, 11:13</td>
+      <td>16 Feb 2024, 12:30</td>
     </tr>
   </tbody>
 </table>
@@ -123,14 +123,14 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">4.494</span>
+  <span class="lead-duration duration">3.222</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">OBTENER EL USUARIO CREADO MEDIANTE ID</span>
+  <span class="name">OBTENER EL USUARIO CREADO</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -164,9 +164,36 @@ $(document).ready(function() {
 
 <div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
-  <span class="name">url 'https://petstore.swagger.io/v2/user/666'</span>
+  <span class="name">path '/user/'+testUser</span>
 
-  <span class="lead-duration duration">0.002</span>
+  <span class="lead-duration duration">0.003</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">def resBody = read(getUserResponseFilePath)</span>
+
+  <span class="lead-duration duration">0.035</span>
 
 </div>
 
@@ -191,9 +218,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-When passed">
   <span class="keyword indention">When</span>
-  <span class="name">method get</span>
+  <span class="name">method GET</span>
 
-  <span class="lead-duration duration">4.492</span>
+  <span class="lead-duration duration">3.183</span>
 
 </div>
 
@@ -211,21 +238,21 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details">
-        <pre>09:59:50.367 request:
-1 &gt; GET https://petstore.swagger.io/v2/user/666
+        <pre>12:30:15.956 request:
+1 &gt; GET https://petstore.swagger.io/v2/user/arm997
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: petstore.swagger.io
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.21)
 
-09:59:51.688 response time in milliseconds: 1302,39
+12:30:18.109 response time in milliseconds: 2093,97
 1 &lt; 404
 1 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
 1 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
 1 &lt; Access-Control-Allow-Origin: *
 1 &lt; Connection: keep-alive
 1 &lt; Content-Type: application/json
-1 &lt; Date: Wed, 24 Jan 2024 14:59:51 GMT
+1 &lt; Date: Fri, 16 Feb 2024 17:30:18 GMT
 1 &lt; Server: Jetty(9.2.9.v20150224)
 1 &lt; Transfer-Encoding: chunked
 {&quot;code&quot;:1,&quot;type&quot;:&quot;error&quot;,&quot;message&quot;:&quot;User not found&quot;}</pre>
@@ -262,7 +289,7 @@ $(document).ready(function() {
           <a>com.intuit.karate.exception.KarateException:</a>
       </div>
       <div id="msg-4" class="collapse collapsable-details  in ">
-        <pre>com.intuit.karate.exception.KarateException: users.feature:31 - status code was: 404, expected: 200, response time: 1302, url: https://petstore.swagger.io/v2/user/666, response: {&quot;code&quot;:1,&quot;type&quot;:&quot;error&quot;,&quot;message&quot;:&quot;User not found&quot;}</pre>
+        <pre>com.intuit.karate.exception.KarateException: users.feature:47 - status code was: 404, expected: 200, response time: 2094, url: https://petstore.swagger.io/v2/user/arm997, response: {&quot;code&quot;:1,&quot;type&quot;:&quot;error&quot;,&quot;message&quot;:&quot;User not found&quot;}</pre>
       </div>
     </div>
   </div>
@@ -276,146 +303,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-5" class="collapse collapsable-details">
-        <pre>09:59:51.689 status code was: 404, expected: 200, response time: 1302, url: https://petstore.swagger.io/v2/user/666, response: {&quot;code&quot;:1,&quot;type&quot;:&quot;error&quot;,&quot;message&quot;:&quot;User not found&quot;}</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-      </div>
-  </div>
-</div>
-
-
-
-
-
-  </div>
-</div>
-
-
-<div class="element">
-    <div class="indention">
-      <b>Feature:</b>
-      <a href="report-feature_4028495176.html">users/users.feature</a>
-    </div>
-
-
-<div class="tags indention">
-</div>
-
-
-  <span class="lead-duration duration">4.494</span>
-
-
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-6">
-
-<div class="brief failed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">OBTENER USUARIO ACTUALIZADO POR ID</span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-6" class="collapse collapsable-details  in ">
-
-
-
-
-
-<div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-7">
-
-<div class="brief failed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </div>
-
-  <div id="steps-7" class="inner-level collapse collapsable-details  in ">
-      <div class="step">
-
-
-<div class="brief step-name-Given passed">
-  <span class="keyword indention">Given</span>
-  <span class="name">url 'https://petstore.swagger.io/v2/user/666'</span>
-
-  <span class="lead-duration duration">0.002</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-When passed">
-  <span class="keyword indention">When</span>
-  <span class="name">method get</span>
-
-  <span class="lead-duration duration">4.491</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-8">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-8" class="collapse collapsable-details">
-        <pre>09:59:50.367 request:
-1 &gt; GET https://petstore.swagger.io/v2/user/666
-1 &gt; Accept-Encoding: gzip,deflate
-1 &gt; Connection: Keep-Alive
-1 &gt; Host: petstore.swagger.io
-1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.21)
-
-09:59:51.688 response time in milliseconds: 1301,02
-1 &lt; 404
-1 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
-1 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
-1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Connection: keep-alive
-1 &lt; Content-Type: application/json
-1 &lt; Date: Wed, 24 Jan 2024 14:59:51 GMT
-1 &lt; Server: Jetty(9.2.9.v20150224)
-1 &lt; Transfer-Encoding: chunked
-{&quot;code&quot;:1,&quot;type&quot;:&quot;error&quot;,&quot;message&quot;:&quot;User not found&quot;}</pre>
+        <pre>12:30:18.110 status code was: 404, expected: 200, response time: 2094, url: https://petstore.swagger.io/v2/user/arm997, response: {&quot;code&quot;:1,&quot;type&quot;:&quot;error&quot;,&quot;message&quot;:&quot;User not found&quot;}</pre>
       </div>
     </div>
   </div>
@@ -430,115 +318,9 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then failed">
-  <span class="keyword indention">Then</span>
-  <span class="name">status 200</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-9">
-          <a>com.intuit.karate.exception.KarateException:</a>
-      </div>
-      <div id="msg-9" class="collapse collapsable-details  in ">
-        <pre>com.intuit.karate.exception.KarateException: users.feature:58 - status code was: 404, expected: 200, response time: 1301, url: https://petstore.swagger.io/v2/user/666, response: {&quot;code&quot;:1,&quot;type&quot;:&quot;error&quot;,&quot;message&quot;:&quot;User not found&quot;}</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-  <div class="inner-level">
-    <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-10">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-10" class="collapse collapsable-details">
-        <pre>09:59:51.689 status code was: 404, expected: 200, response time: 1301, url: https://petstore.swagger.io/v2/user/666, response: {&quot;code&quot;:1,&quot;type&quot;:&quot;error&quot;,&quot;message&quot;:&quot;User not found&quot;}</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-      </div>
-  </div>
-</div>
-
-
-
-
-
-  </div>
-</div>
-
-
-<div class="element">
-    <div class="indention">
-      <b>Feature:</b>
-      <a href="report-feature_4028495176.html">users/users.feature</a>
-    </div>
-
-
-<div class="tags indention">
-</div>
-
-
-  <span class="lead-duration duration">0.255</span>
-
-
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-11">
-
-<div class="brief failed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">ELIMINAR USUARIO CREADO CON ID</span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-11" class="collapse collapsable-details  in ">
-
-
-
-
-
-<div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-12">
-
-<div class="brief failed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </div>
-
-  <div id="steps-12" class="inner-level collapse collapsable-details  in ">
-      <div class="step">
-
-
-<div class="brief step-name-Given passed">
-  <span class="keyword indention">Given</span>
-  <span class="name">url 'https://petstore.swagger.io/v2/user/666'</span>
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response == resBody</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -563,109 +345,9 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-When passed">
-  <span class="keyword indention">When</span>
-  <span class="name">method delete</span>
-
-  <span class="lead-duration duration">0.254</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-13">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-13" class="collapse collapsable-details">
-        <pre>09:59:51.698 request:
-1 &gt; DELETE https://petstore.swagger.io/v2/user/666
-1 &gt; Accept-Encoding: gzip,deflate
-1 &gt; Connection: Keep-Alive
-1 &gt; Host: petstore.swagger.io
-1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.21)
-
-09:59:51.952 response time in milliseconds: 252,28
-1 &lt; 404
-1 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
-1 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
-1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Connection: keep-alive
-1 &lt; Content-Length: 0
-1 &lt; Date: Wed, 24 Jan 2024 14:59:52 GMT
-1 &lt; Server: Jetty(9.2.9.v20150224)</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then failed">
-  <span class="keyword indention">Then</span>
-  <span class="name">status 200</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-14">
-          <a>com.intuit.karate.exception.KarateException:</a>
-      </div>
-      <div id="msg-14" class="collapse collapsable-details  in ">
-        <pre>com.intuit.karate.exception.KarateException: users.feature:63 - status code was: 404, expected: 200, response time: 252, url: https://petstore.swagger.io/v2/user/666, response: </pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-  <div class="inner-level">
-    <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-15">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-15" class="collapse collapsable-details">
-        <pre>09:59:51.953 status code was: 404, expected: 200, response time: 252, url: https://petstore.swagger.io/v2/user/666, response:</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-When skipped">
-  <span class="keyword indention">When</span>
-  <span class="name">method get</span>
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match $.username == testUser</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -690,9 +372,144 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
-  <span class="keyword indention">Then</span>
-  <span class="name">status 200</span>
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match $.firstName == testFirstName</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match $.lastName == testLastName</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match $.phone == testPhone</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match $.email == testEmail</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match $.id == testId</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
 
   <span class="lead-duration duration">0.000</span>
 

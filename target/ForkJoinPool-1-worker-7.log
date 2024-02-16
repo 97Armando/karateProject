@@ -1,4 +1,4 @@
-11:13:06.180 request:
+12:30:15.957 request:
 1 > PUT https://petstore.swagger.io/v2/user/arm997
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
@@ -8,22 +8,21 @@
 1 > User-Agent: Apache-HttpClient/4.5.11 (Java/11.0.21)
 {"id":1789452603,"username":"arm997","firstName":"Update","lastName":"Maldonado","email":"update@gmail.com","password":"test","phone":"0989849189","userStatus":1}
 
-11:13:06.915 response time in milliseconds: 721,28
+12:30:18.109 response time in milliseconds: 2122,71
 1 < 200
 1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
 1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
 1 < Access-Control-Allow-Origin: *
 1 < Connection: keep-alive
 1 < Content-Type: application/json
-1 < Date: Tue, 06 Feb 2024 16:13:07 GMT
+1 < Date: Fri, 16 Feb 2024 17:30:18 GMT
 1 < Server: Jetty(9.2.9.v20150224)
 1 < Transfer-Encoding: chunked
 {"code":200,"type":"unknown","message":"1789452603"}
 
-11:13:06.918 [print] {
+12:30:18.113 [print] {
   "code": 200,
   "type": "unknown",
   "message": "1789452603"
 }
-
 

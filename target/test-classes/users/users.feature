@@ -79,25 +79,9 @@ Scenario: OBTENER EL USUARIO ACTUALIZADO
     And def resBody = read(getUserResponseFilePath)
     When method GET
     Then status 200
-#    And match response == resBody
-#    And match $.username == testUser
-#    And match $.firstName == testFirstName
-#    And match $.lastName == testLastName
-#    And match $.phone == testPhone
-#    And match $.email == testEmail
-#    And match $.id == testId
-#    And print response
 
 Scenario: ELIMINAR USUARIO
     Given path '/user/'+testUser
     And def resBody = read(getUserResponseFilePath)
     When method DELETE
     Then status 200
-#    And match response == resBody
-#    And match $.username == testUser
-#    And match $.firstName == testFirstName
-#    And match $.lastName == testLastName
-#    And match $.phone == testPhone
-#    And match $.email == testEmail
-#    And match $.id == testId
-#    And print response
